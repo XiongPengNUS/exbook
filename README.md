@@ -61,7 +61,7 @@ print(eb[0])        # Print the first question
 
 
     
-    [1mData Type Conversion: Easy[0;0m 
+<b>Data Type Conversion: Easy</b>
     
 
 
@@ -98,19 +98,6 @@ eb[0].check(dtc, cheat=True)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">

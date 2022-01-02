@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='exbook',
-     version='0.0.3',
+     version='v0.0.4',
      author="Peng Xiong",
      author_email="xiongpengnus@gmail.com",
      description="Exercises for Python coding",
@@ -16,4 +16,8 @@ setuptools.setup(
          "Programming Language :: Python :: 3",
          "Operating System :: OS Independent",
      ],
+     install_requires=[
+         "pandas >= 0.25.0",
+         "ipython >= 7.0.0",
+     ]
  )

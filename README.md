@@ -2,6 +2,8 @@
 
 The package <code>exbook</code> is used for practicing basic Python programming. So far there are totally 36 questions with different difficulty levels. For the purpose of practicing, you are recommended to only use basic built-in functions like <code>find()</code>, <code>min()</code>, <code>max()</code> and <code>sum()</code>. Imported packages or more advanced functions or methods, such as <code>sort()</code>, <code>argmin()</code>, or <code>split()</code> should be avoided. 
 
+We also provide the online version of <code>exbook</code> and you can access it at: https://nus-biz-dao.herokuapp.com/
+
 ## Steps of running <code>exbook</code>
 
 ### Step 1: import the exercise book

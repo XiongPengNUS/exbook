@@ -31,9 +31,12 @@ class Question:
             for n in range(len(each_input)):
                 cheat_list.append(str(each_input[n]))
             cheat_list = cheat_list + [str(each_output[0])]
-            sample_dict = {keys[j]: cheat_list[j]
-                           for j in range(len(keys))}
-            cheat_table = cheat_table.append(sample_dict, ignore_index=True)
+            sample_dict = pd.DataFrame({keys[j]: [cheat_list[j]]
+                                        for j in range(len(keys))})
+            # cheat_table = cheat_table.append(sample_dict, ignore_index=True)
+            cheat_table = pd.concat((cheat_table, sample_dict), 
+                                    ignore_index=False)
+            print(cheat_table)
 
         cheat_table.rename(index={i: 'Test {0}:'.format(i+1)
                                   for i in range(cheat_table.shape[0])},
@@ -83,9 +86,10 @@ class Question:
             cheat_list = cheat_list + [str(this_output),
                                        str(each_output[0]),
                                        str(correct[-1])]
-            test_dict = {keys[i]: cheat_list[i]
-                         for i in range(len(keys))}
-            cheat_table = cheat_table.append(test_dict, ignore_index=True)
+            test_dict = pd.DataFrame({keys[i]: [cheat_list[i]]
+                                     for i in range(len(keys))})
+            # cheat_table = cheat_table.append(test_dict, ignore_index=True)
+            cheat_table = pd.concat((cheat_table, test_dict), ignore_index=True)
 
         if cheat:
             cheat_table.rename(index={i: 'Test {0}:'.format(i+1)
@@ -212,8 +216,8 @@ def all_questions():
               [[1, 2, 3, 5], [1, 2, 3, 4]], [[1, 3], [1, 2]],
               [[1, 2, 3, 5], [5, 3, 1, 2]])
     outputs = ([2], [2], [0], [0], [4])
-    question_list.append(Question(readme, inputs, outputs, index=[0, 2],
-                                  id='wrong position'))
+    question_list.append(Question(readme, inputs, outputs, index=[0, 2], 
+                                  level='medium', id='wrong position'))
 
     readme = 'Given a list of unique numbers, write a function to return ' \
              'the position \nindex of the smallest number. For example, if ' \

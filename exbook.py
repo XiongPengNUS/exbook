@@ -210,8 +210,8 @@ def all_questions():
              'function to return \nthe number of items in these two lists ' \
              'that have the same values but are at \nthe different ' \
              'positions. For example, if these two lists are [1, 2, 3, 5] ' \
-             '\nand [2, 1, 3, 4], then the output is 1 because the same ' \
-             'value 3 appears at \nthe same position 2 of both lists.'
+             '\nand [2, 1, 3, 4], then the output is 2 because the same ' \
+             'values 1 and \n2 appear at the different positions.'
     inputs = ([[1, 2, 3, 5], [2, 1, 3, 4]], [[1, 2, 3, 5], [5, 2, 3, 1]],
               [[1, 2, 3, 5], [1, 2, 3, 4]], [[1, 3], [1, 2]],
               [[1, 2, 3, 5], [5, 3, 1, 2]])

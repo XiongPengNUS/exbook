@@ -36,8 +36,7 @@ class Question:
             # cheat_table = cheat_table.append(sample_dict, ignore_index=True)
             cheat_table = pd.concat((cheat_table, sample_dict), 
                                     ignore_index=False)
-            print(cheat_table)
-
+            
         cheat_table.rename(index={i: 'Test {0}:'.format(i+1)
                                   for i in range(cheat_table.shape[0])},
                                   inplace=True)

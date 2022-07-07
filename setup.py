@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='exbook',
-     version='0.0.4',
+     version='0.0.5',
      author="Peng Xiong",
      author_email="xiongpengnus@gmail.com",
      description="Exercises for Python coding",
